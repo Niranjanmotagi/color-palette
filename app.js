@@ -258,9 +258,8 @@ function footerHTML() {
   return `
   <footer>
     <div class="socials">
-      <a href="#" aria-label="Twitter">${ICONS.twitter}</a>
       <a href="https://github.com/niranjanmotagi" target="_blank" rel="noopener" aria-label="GitHub">${ICONS.github}</a>
-      <a href="#" aria-label="LinkedIn">${ICONS.linkedin}</a>
+      <a href="https://www.linkedin.com/in/niranjan-motagi" target="_blank" rel="noopener" aria-label="LinkedIn">${ICONS.linkedin}</a>
       <a href="https://instagram.com/niranjan_a_m" target="_blank" rel="noopener" aria-label="Instagram">${ICONS.instagram}</a>
     </div>
     <div><a class="mail" href="mailto:niranjan.motagi@gmail.com">${ICONS.mail} niranjan.motagi@gmail.com</a></div>
