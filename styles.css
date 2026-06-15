@@ -356,12 +356,68 @@ footer .crafted { color: var(--muted); font-size: 13.5px; font-weight: 600; marg
 
 /* ============ Responsive ============ */
 @media (max-width: 880px) {
-  .hero { grid-template-columns: 1fr; padding-bottom: 44px; }
+  .hero { grid-template-columns: 1fr; padding: 24px 22px 44px; }
   .says-grid, .cards { grid-template-columns: repeat(2, 1fr); }
-  .letterhead { letter-spacing: 2px; }
+  .letterhead { letter-spacing: 2px; font-size: clamp(26px, 6.4vw, 56px); }
+  .cards { margin-top: 56px; }
 }
-@media (max-width: 560px) {
+
+@media (max-width: 600px) {
+  /* lighter shadows so big offsets never push past the viewport */
+  :root { --sh: 4px 4px 0 var(--ink); --sh-lg: 5px 5px 0 var(--ink); }
+
+  .nav { padding: 16px 16px; }
+  .brand .name { font-size: 22px; }
+  .btn-github { font-size: 14px; padding: 9px 14px; }
+
+  .hero { padding: 16px 16px 40px; gap: 30px; }
+  .hero-words span {
+    font-size: clamp(46px, 15vw, 92px);
+    -webkit-text-stroke: 1.5px var(--ink);
+    text-shadow: 4px 4px 0 var(--ink);
+  }
+  .btn-checknow { margin-top: 30px; font-size: 22px; padding: 16px 18px; box-shadow: 5px 5px 0 var(--ink); }
+
+  .shell { margin: 40px 14px; padding: 18px 16px 0; border-width: 3px; }
   .says-grid, .cards { grid-template-columns: 1fr; }
-  .pfi-cols { gap: 36px; }
-  .hero-words span { -webkit-text-stroke: 1.5px var(--ink); text-shadow: 4px 4px 0 var(--ink); }
+  .cards { padding: 0 16px; gap: 22px; }
+  .pfi-cols { gap: 30px; }
+
+  .tool { padding: 22px 4px 34px; }
+  .tool h2 { font-size: clamp(22px, 6vw, 30px); }
+  .tool .sub { font-size: 13.5px; }
+
+  /* letterheads must fit one line on phones */
+  .letterhead {
+    font-size: clamp(15px, 6vw, 34px);
+    letter-spacing: 0.5px;
+    -webkit-text-stroke: 1.4px var(--ink);
+    text-shadow: 3px 3px 0 var(--ink);
+    margin-top: 28px; margin-bottom: -10px;
+  }
+
+  .tpg-row { gap: 22px 26px; }
+  .tpg-slot .circle { width: 54px; height: 54px; }
+
+  .trend-row { gap: 14px; }
+  .trend-row .idx { width: auto; }
+  .swatch { width: 46px; height: 46px; }
+  .shades-btn { font-size: 13px; padding: 10px 16px; }
+
+  .grad-box { height: 200px; }
+  .grad-actions { gap: 22px; }
+
+  .says-card .chip { height: 76px; font-size: 20px; }
+
+  .footer-big { text-shadow: 4px 4px 0 var(--ink); letter-spacing: 1px; }
+  footer { padding: 56px 16px 64px; }
+
+  #toasts { left: 12px; right: 12px; top: 12px; }
+  .toast { min-width: 0; max-width: none; width: 100%; }
+}
+
+@media (max-width: 380px) {
+  .hero-words span { font-size: clamp(42px, 14vw, 64px); }
+  .letterhead { font-size: clamp(13px, 5.6vw, 30px); }
+  .swatch { width: 42px; height: 42px; }
 }
